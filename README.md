@@ -94,5 +94,8 @@ Kaggle Dataset: Hospital Readmissions – https://www.kaggle.com/datasets/dubrad
 This repository is open for educational and research purposes.
 Feel free to open issues or pull requests.
 Please provide attribution if using or modifying this codebase.
+*Human Participant Confidentiality:*
+
+This research utilized a publicly available dataset ("Hospital Readmissions" from Kaggle: [https://www.kaggle.com/datasets/dubradave/hospital-readmissions](https://www.kaggle.com/datasets/dubradave/hospital-readmissions)). In accordance with the ICMJE Privacy and Confidentiality guidelines, no identifying information of human participants was included in the dataset as provided. The authors have taken all necessary precautions to ensure that the code and any derived analyses presented in this manuscript and the associated GitHub repository ([https://github.com/Sonardhruv/MLresearchPaper](https://github.com/Sonardhruv/MLresearchPaper)) do not contain any information that could potentially identify individual human participants. The dataset was used in an anonymized form.
 
 
