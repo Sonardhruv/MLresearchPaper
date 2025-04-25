@@ -63,6 +63,29 @@ Plots and charts will be saved to the directory for analysis.
 
 **Visualization:** Libraries like `matplotlib` and `seaborn` were used for potential data trend and model performance visualizations. Data trends and model performance were visualized using Figma and Mermaid as well.
 
+## Materials & Methods
+
+**Code Repository:** The complete code implementation for this research is available at the following GitHub repository: [https://github.com/Sonardhruv/MLresearchPaper](https://github.com/Sonardhruv/MLresearchPaper)
+
+**Dataset:** The dataset used in this study is the "Hospital Readmissions" dataset, accessed from Kaggle at the following URL: [https://www.kaggle.com/datasets/dubradave/hospital-readmissions](https://www.kaggle.com/datasets/dubradave/hospital-readmissions).
+
+**Selection Method:** The choice of the Bi-LSTM and XGBoost models was driven by their potential to capture different aspects of the complex relationships within the patient data relevant to predicting readmission.
+
+* **Bi-LSTM:** Given that patient medical records can exhibit temporal patterns (e.g., changes in lab values, medication history), a Bidirectional Long Short-Term Memory (Bi-LSTM) network was selected. Bi-LSTMs excel at processing sequential data by considering information from both past and future time steps within a sequence. While the current implementation treats each patient encounter as a single time step after initial preprocessing, the Bi-LSTM's capability to handle sequential dependencies makes it a suitable choice for potential future expansions that might incorporate longitudinal patient data or order-dependent features. It allows the model to learn intricate relationships that might be missed by traditional feedforward networks.
+
+* **XGBoost:** XGBoost, a highly effective gradient boosting algorithm, was chosen as the primary classification model due to its proven performance on structured, tabular datasets. After the data preprocessing and potential feature extraction (or direct use of preprocessed features) that the Bi-LSTM could contribute to in more complex sequential scenarios, XGBoost's ability to handle non-linear relationships, feature interactions, and its regularization techniques make it robust and less prone to overfitting. The combination aims to leverage the Bi-LSTM's capacity for learning complex data representations (especially if temporal aspects were more explicitly encoded in future iterations) with XGBoost's powerful classification capabilities.
+
+The evaluation metrics were selected to provide a comprehensive understanding of the model's predictive performance:
+
+* **Accuracy:** To measure the overall correctness of the predictions.
+* **Precision:** To assess the proportion of correctly predicted readmissions out of all instances predicted as readmission.
+* **Recall:** To evaluate the proportion of actual readmissions that were correctly identified by the model.
+* **F1-score:** To provide a balanced measure of precision and recall, particularly useful in scenarios with potential class imbalance.
+* **AUROC (Area Under the Receiver Operating Characteristic curve):** To assess the model's ability to discriminate between patients who will and will not be readmitted across different classification thresholds.
+* **Error Rate:** To quantify the overall misclassification rate.
+* **Specificity:** To measure the model's ability to correctly identify patients who will not be readmitted.
+* **Matthews Correlation Coefficient (MCC):** To provide a balanced measure of the quality of the binary classification, especially useful when dealing with imbalanced datasets, as it considers all four outcomes in the confusion matrix.
+  
 ## Citations
 
 Kaggle Dataset: Hospital Readmissions – https://www.kaggle.com/datasets/dubradave/hospital-readmissions
